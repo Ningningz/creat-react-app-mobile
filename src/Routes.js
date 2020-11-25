@@ -4,7 +4,7 @@
  */
 /* eslint-disable react/jsx-no-bind, import/dynamic-import-chunkname */
 
-import { Switch, Route } from 'react-router-dom';
+import {Switch, Route} from 'react-router-dom';
 import loadable from 'react-loadable';
 
 // import EnhancedRoute from './component/EnhancedRoute';
@@ -41,15 +41,15 @@ import routes from './route.config';
 //     );
 // }
 
-const RouteWithSubRoutes = routes =>
+const routeWithSubRoutes = routes =>
     props => routes.map(route => {
-        const { match: { path } } = props;
-        const { path: subPath = '', component, exact = true, routes = [] } = route;
+        const {match: {path}} = props;
+        const {path: subPath = '', component, exact = true, routes = []} = route;
 
         const Component = loadable({
             loader: () => import(`~/pages/${component}`),
             loading() {
-                return <div>正在加载</div>
+                return <div>正在加载</div>;
             },
         });
 
@@ -57,7 +57,7 @@ const RouteWithSubRoutes = routes =>
             ? subPath.startsWith('/') ? subPath : `${path}/${subPath}`
             : path;
 
-            console.log('key---',routes, key, component, exact, props.match);
+        console.log('key---', routes, key, component, exact, props.match);
 
         // if (routes.length) {
         //     console.log('routes.length---',routes);
@@ -87,7 +87,6 @@ const RouteWithSubRoutes = routes =>
     });
 
 
-
 export default function Routes(props) {
 
     return (
@@ -100,14 +99,18 @@ export default function Routes(props) {
                     // name,
                     routes,
                 } = routeItem;
-                let Component = RouteWithSubRoutes(routes);
+                const Component = routeWithSubRoutes(routes);
 
-                return <Route key={path} exact={exact} {...routeItem} render={
-                    routerProps => {
-                        console.log('Routes---', routerProps);
-                        return <Component {...routerProps}/>
-                    }
-                } />;
+                return (
+                    <Route
+                        key={path} exact={exact} {...routeItem} render={
+                            routerProps => {
+                                console.log('Routes---', routerProps);
+                                return <Component {...routerProps} />;
+                            }
+                        }
+                    />
+                );
 
             })}
         </Switch>

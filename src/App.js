@@ -1,7 +1,7 @@
 // import logo from './logo.svg';
 import './App.css';
-import Routes from './Routes';
 import {withRouter} from 'react-router-dom';
+import Routes from './Routes';
 
 // function App() {
 //   return (

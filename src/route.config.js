@@ -1,6 +1,6 @@
 const config = [
     {
-        path: "/test2",
+        path: '/test2',
         exact: false,
         routes: [
             {
@@ -10,7 +10,7 @@ const config = [
         ],
     },
     {
-        path: "/test1",
+        path: '/test1',
         exact: false,
         routes: [
             {
@@ -19,7 +19,7 @@ const config = [
                 exact: true,
             },
             {
-                path: "children1",
+                path: 'children1',
                 component: 'TestChildren1',
                 exact: true,
             },
