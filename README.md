@@ -1,70 +1,66 @@
-# Getting Started with Create React App
+[TOC]
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 依赖
 
-## Available Scripts
+- 包管理工具推荐使用  **yarn**
+- node版本  **^10.12.0**
 
-In the project directory, you can run:
+## 运行
 
-### `yarn start`
+`yarn start` or `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Runs the app in development mode.
+Open http://localhost:3000 to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## 项目结构
 
-### `yarn test`
+```
+    ├── README.md
+    ├── build               -------- build后生成的文件
+    │   ├── favicon.ico
+    │   ├── logo192.png
+    │   ├── logo512.png
+    │   ├── manifest.json
+    │   └── robots.txt
+    ├── config-overrides.js  ------- webpack的扩展文件
+    ├── package.json
+    ├── proxy.config.js      ------- 请求代理文件
+    ├── public               ------- 静态资源文件夹
+    │   ├── favicon.ico
+    │   ├── index.html
+    │   ├── logo192.png
+    │   ├── logo512.png
+    │   ├── manifest.json
+    │   └── robots.txt
+    ├── src                  -------- 业务逻辑代码
+    │   ├── App.css
+    │   ├── App.js
+    │   ├── App.test.js
+    │   ├── Routes.js
+    │   ├── common              ------ 业务公共组件文件夹
+    │   ├── css                 ------ css 样式文件夹
+    │   ├── index.js
+    │   ├── index.less
+    │   ├── logo.svg
+    │   ├── pages               ------ 业务页面文件夹
+    │   │   ├── Test1.js
+    │   │   ├── Test2.js
+    │   │   └── TestChildren1.js
+    │   ├── route.config.js      ------ 路由配置文件
+    │   ├── service              ------ 请求文件夹
+    │   │   ├── http.js             ------  封装后请求文件
+    │   │   └── use.js
+    │   ├── setupTests.js
+    │   ├── uiComponent          ------- 基础组件文件夹
+    │   └── utils                ------- 工具类方法文件夹
+    │       ├── sentryConfig.js       ----- sentry配置文件
+    │       └── v-console.js          -----  调试工具文件
+    └── yarn.lock
+```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## 参考文档
 
-### `yarn build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+1. [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started)
+2. [React documentation](https://reactjs.org/).
+3. [react-app-rewired](https://github.com/marcopeg/create-react-app/blob/master/packages/react-scripts/README.md)
+4. [customize-cra](https://github.com/arackaf/customize-cra)
