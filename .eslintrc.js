@@ -1,5 +1,9 @@
 module.exports = {
     extends: ['plugin:mew/react'],
+    globals: {
+        habo: true,
+        Sentry: true
+    },
     env: {
         browser: true,
         node: true,
@@ -19,6 +23,9 @@ module.exports = {
                 ignoredNodes: ['TemplateLiteral']
             }
         ],
-        'template-curly-spacing': ['off']
+        'template-curly-spacing': ['off'],
+        'no-import-assign': ['off'],
+        'no-dupe-else-if': ['off'],
+        'no-setter-return': ['off']
     }
 };
